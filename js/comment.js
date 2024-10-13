@@ -194,7 +194,7 @@ export const comment = (() => {
             }
         }
 
-        const response = await request(HTTP_POST, '/api/comment')
+        const response = await request(HTTP_POST, 'https://wedding-api.yoganova.my.id/')
             .token(session.getToken())
             .body(dto.postCommentRequest(id, nameValue, isPresence, form.value))
             .send(dto.postCommentResponse)
