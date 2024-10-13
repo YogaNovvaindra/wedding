@@ -98,6 +98,8 @@
       href="https://cdn.jsdelivr.net"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -170,6 +172,15 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap"
+      rel="stylesheet"
+    />
     <!-- Dependencies CSS -->
     <link
       rel="stylesheet"
@@ -201,9 +212,10 @@
   <!-- If not using comments, you can remove the data-key and data-url attributes -->
 
   <body
-    data-key="bfb9cfea33ab7ae21a315fbd6f065a815d3e20ff2f007aa2ca"
-    data-url="https://api.ulems.my.id/"
+    data-key="d747a3d32e71e4881f0d3e469c0e21bb5d170bd71c399ffaf0"
+    data-url="https://wedding-api.yoganova.my.id/"
     style="overflow-y: hidden"
+    class="font-Montserrat"
   >
     <!-- Navbar Bottom -->
     <nav
@@ -1100,10 +1112,10 @@
         style="height: 100vh !important"
       >
         <div class="text-center">
-          <div class="img-crop-2 mx-auto">
-            <h2 class="position-absolute top-0 py-1" style="font-size: 1.2rem">
+          <div class="img-crop-2 mx-auto shadow text-white text-shadow" >
+            <h2 class="position-absolute top-0 py-1 " style="font-size: 1rem">
               The Wedding Of
-              <span class="font-esthetic" style="font-size: 2rem">
+              <span class="font-oooh-baby-regular" style="font-size: 2rem; font-weight: 700;">
                 <br />
                 Yoga Novaindra &amp; Rossa Budi Noverdiana
               </span>
@@ -1112,14 +1124,17 @@
               class="position-absolute bottom-0 py-1"
               style="font-size: 1.2rem"
             >
-              Kamis, 20 Januari 2024
+              Senin, 06 Januari 2025
             </h2>
-            <img src="./assets/images/bg.png" alt="background" />
+            <img
+              src="https://yoganovaindra.s3.ap-southeast-1.amazonaws.com/image/cover.jpg"
+              alt="background"
+            />
           </div>
 
           <h2
             class="mt-4"
-            style="font-size: 1.2rem; line-height: 1.6; padding: 10px"
+            style="font-size: 1rem; line-height: 1.6; padding: 20px"
           >
             Dear,
             <br />
@@ -1140,10 +1155,14 @@
 
           <button
             type="button"
-            class="btn btn-light shadow rounded-4"
+            class="btn-theme-light shadow rounded-4"
             onclick="guest.open(this)"
           >
-            <i class="fa-solid fa-envelope-open me-2"></i>Open Invitation
+            <i
+              class="fa-solid fa-heart me-2"              
+              "
+            ></i
+            >Open Invitation
           </button>
         </div>
       </div>
@@ -1179,12 +1198,6 @@
         style="height: 100vh !important"
       >
         <div class="w-75 text-center">
-          <img
-            class="img-fluid mb-3"
-            src="./assets/images/icon-192x192.png"
-            alt="icon"
-            style="width: 3.5rem"
-          />
           <div class="progress" role="progressbar" style="height: 0.5rem">
             <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
           </div>
@@ -1192,13 +1205,7 @@
             class="mt-1 text-light"
             id="progress-info"
             style="display: none"
-            >Loading</small
-          >
-          <noscript>
-            <small class="mt-1 text-danger"
-              >Sorry, this invitation requires javascript to work</small
-            >
-          </noscript>
+          ></small>
         </div>
       </div>
     </div>

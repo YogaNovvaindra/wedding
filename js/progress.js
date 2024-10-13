@@ -1,7 +1,7 @@
 import { guest } from './guest.js';
+import { theme } from './theme.js';  // Import the theme module
 
 export const progress = (() => {
-
     let info = null;
     let bar = null;
 
@@ -18,26 +18,23 @@ export const progress = (() => {
         if (!push) {
             return;
         }
-
         total += 1;
     };
 
-    const complete = (type) => {
+    const complete = () => {
         if (!valid) {
             return;
         }
 
         loaded += 1;
         bar.style.width = Math.min((loaded / total) * 100, 100).toString() + "%";
-        info.innerText = `Loading ${type} complete (${loaded}/${total}) [${parseInt((loaded / total) * 100).toFixed(0)}%]`;
 
         if (loaded === total) {
             onComplete();
         }
     };
 
-    const invalid = (type) => {
-        info.innerText = `Error loading ${type} (${loaded}/${total}) [${parseInt((loaded / total) * 100).toFixed(0)}%]`;
+    const invalid = () => {
         bar.style.backgroundColor = 'red';
         valid = false;
     };
@@ -59,12 +56,24 @@ export const progress = (() => {
         });
     };
 
+    const setThemeColor = () => {
+        if (bar) {
+            bar.style.backgroundColor = theme.isDarkMode() ? '#ffffff' : '#000000';
+        }
+    };
+
     const init = () => {
         document.querySelectorAll('img').forEach(add);
 
         info = document.getElementById('progress-info');
         bar = document.getElementById('progress-bar');
         info.style.display = 'block';
+
+        // Set initial color based on current theme
+        setThemeColor();
+
+        // Listen for theme changes
+        document.addEventListener('themeChanged', setThemeColor);
 
         push = false;
         run();

@@ -14,6 +14,15 @@
   font-family: Sacramento, cursive !important;
 }
 
+.font-Montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.font-oooh-baby-regular {
+  font-family: "Oooh Baby", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 .font-arabic {
   font-family: "Noto Naskh Arabic", serif !important;
 }
@@ -50,6 +59,12 @@
   height: 100%;
   width: 100%;
 }
+
+.text-shadow {
+  text-shadow: 1px 1px 2px grey, 0 0 1em lightgrey, 0 0 0.2em lightgrey;
+}
+
+/* shadow kedalam */
 
 .btn-music {
   position: fixed;
