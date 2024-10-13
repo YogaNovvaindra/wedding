@@ -6,7 +6,7 @@ export const displayUserName = () => {
 
   if (nameDisplay) {
     nameDisplay.textContent = name 
-      ? `Hello, ${decodeURIComponent(name)}!` 
+      ? `${decodeURIComponent(name)}!` 
       : "No name provided.";
   } else {
     console.warn("Element with ID 'nameDisplay' not found.");
