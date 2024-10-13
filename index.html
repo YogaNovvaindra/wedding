@@ -1118,7 +1118,7 @@
           </div>
 
           <h2
-            class="my-4"
+            class="mt-4"
             style="font-size: 1.2rem; line-height: 1.6; padding: 10px"
           >
             Dear,
@@ -1136,7 +1136,7 @@
 
           <button
             type="button"
-            class="btn btn-light shadow rounded-4 mt-2"
+            class="btn btn-light shadow rounded-4"
             onclick="guest.open(this)"
           >
             <i class="fa-solid fa-envelope-open me-2"></i>Open Invitation
@@ -1236,19 +1236,6 @@
       integrity="sha256-mvTaORw+RTgKnX6ZHT4P5Sc9DNP2TBpSGII7F3sT8iE="
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const path = window.location.pathname;
-        const name = path.split("/").pop();
-        const nameDisplay = document.getElementById("nameDisplay");
-
-        if (name) {
-          nameDisplay.textContent = `Hello, ${decodeURIComponent(name)}!`;
-        } else {
-          nameDisplay.textContent = "No name provided.";
-        }
-      });
-    </script>
     <script src="./js/app.js" type="module"></script>
   </body>
 </html>

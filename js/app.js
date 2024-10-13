@@ -6,6 +6,7 @@ import { audio } from './audio.js';
 import { comment } from './comment.js';
 import { progress } from './progress.js';
 import { pagination } from './pagination.js';
+import { displayUserName } from './name.js';  // Import the function
 
 document.addEventListener('DOMContentLoaded', () => {
     audio.init();
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     progress.init();
     window.AOS.init();
 
+    // Attach modules to the window object
     window.util = util;
     window.like = like;
     window.guest = guest;
@@ -23,4 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.audio = audio;
     window.comment = comment;
     window.pagination = pagination;
+
+    // Call displayUserName to display the user's name on the page
+    displayUserName();
 });
